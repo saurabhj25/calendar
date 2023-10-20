@@ -1,0 +1,54 @@
+body {
+  font-family: sans-serif;
+  font-size: 16px;
+  line-height: 22px;
+}
+ul {
+  list-style-type: none;
+  padding: 0px;
+  margin: 0px;
+}
+#calendar {
+  padding: 16px;
+  min-width: 270px;
+}
+#monthYearHeader {
+  padding: 10px;
+}
+#monthYearHeader ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  #prev,
+  #next {
+    padding: 8px;
+    border-radius: 4px;
+    cursor: pointer;
+    &:hover {
+      background-color: lightgray;
+    }
+  }
+}
+#weekdays {
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: repeat(7, 1fr);
+  padding: 8px 0px;
+  margin-bottom: 8px;
+  background-color: lightgray;
+}
+#weekdays li {
+  text-align: center;
+}
+#days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+}
+.day {
+  padding: 8px;
+  text-align: center;
+}
+.day.today {
+  background-color: lightgreen;
+}
