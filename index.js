@@ -37,7 +37,7 @@ function renderCalender() {
     }
     calenderBody.appendChild(cellElement);
   }
-  document.getElementById("monthYear").innerHTML = MONTHS[month] + " " + year;
+  document.getElementById("monthYear").innerHTML = `${MONTHS[month]} ${year}`;
 }
 
 function prevMonthHandler() {
@@ -55,7 +55,6 @@ function nextMonthHandler() {
 function addBlankDates(count) {
   for (let i = 0; i < count; i++) {
     let cellElement = document.createElement("div");
-    cellElement.className = "blank_date";
     calenderBody.appendChild(cellElement);
   }
 }
